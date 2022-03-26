@@ -18,7 +18,10 @@ const compareBtcRate=(currency)=>{
     const url=`https://api.coindesk.com/v1/bpi/historical/close.json?start=${lastMonth}&end=${currentMonth}&currency=${currency}`;
    fetch(url)
    .then(res=> res.json())
-   .then(data=> console.log(data))
+   .then(data=> getMaxValue(data.bpi))
 }
 
+const getMaxValue = (data)=>{
+
+}
 compareBtcRate('usd')
