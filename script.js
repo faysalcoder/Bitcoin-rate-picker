@@ -21,7 +21,12 @@ const compareBtcRate=(currency)=>{
    .then(data=> getMaxValue(data.bpi))
 }
 
-const getMaxValue = (data)=>{
-
+const getMaxValue = (datas)=>{
+  
+    const dates = Object.keys(datas);
+    console.log(dates)
+const btcRate = dates.map(date=>{
+    
+})
 }
 compareBtcRate('usd')
